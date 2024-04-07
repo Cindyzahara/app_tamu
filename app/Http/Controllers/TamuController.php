@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tamu;
 use Illuminate\Http\Request;
 
 class TamuController extends Controller
@@ -13,7 +14,8 @@ class TamuController extends Controller
      */
     public function index()
     {
-        return view('data_tamu.index');
+        $dttamu = Tamu::all();
+        return view('data_tamu.index', compact('dttamu'));
     }
 
     /**
@@ -34,7 +36,38 @@ class TamuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'jk' => 'required',
+            'ttl' => 'required',
+            'jabatan' => 'required',
+            'angkatan' => 'required',
+            'alamat' => 'required',
+            'no_tlp' => 'required',
+        ],[
+            'nama.required' => 'Nama tidak boleh kosong',
+            'jk.required' => 'Jenis Kelamin tidak boleh kosong',
+            'ttl.required' => 'Templat Tanggal Lahir tidak boleh kosong',
+            'jabatan.required' => 'Jabatan tidak boleh kosong',
+            'angkatan.required' => 'Angkatan tidak boleh kosong',
+            'alamat.required' => 'Alamat tidak boleh kosong',
+            'no_tlp.required' => 'Nomor telepon tidak boleh kosong',
+        ]); 
+
+      
+        $dttamu = [
+            'nama' => $request->nama,
+            'jk' => $request->jk,
+            'ttl' => $request->ttl,
+            'jabatan' => $request->jabatan,
+            'angkatan' => $request->angkatan,
+            'alamat' => $request->alamat,
+            'no_tlp' => $request->no_tlp,
+        ];
+
+        // dd($pelanggan);
+        Tamu::create($dttamu);
+        return redirect()->route('data_tamu.index')->with('success', 'Data Berhasil disimpan');
     }
 
     /**
