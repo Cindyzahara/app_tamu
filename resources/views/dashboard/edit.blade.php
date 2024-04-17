@@ -16,24 +16,16 @@
                         <div class="col-xl-13">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Tambah Postingan</h4>
+                                    <h4 class="card-title">Edit Postingan</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-form">
-                                        <form method="post" action="/dashboard" enctype="multipart/form-data">
+                                        <form method="post" action="/dashboard">
+                                            @method('put')
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="title" class="form-label">Title</label>
-                                                <input type="text" class="form-control input-default @error('title') is-invalid @enderror"  placeholder="input-default" id="title" name="title" required autofocus value="{{ old('title') }}">
-                                                @error('title')
-                                                        <div class="invalid-feedback">
-                                                            {{ $message }}
-                                                        </div>
-                                                @enderror
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="image" class="form-label">Post Image</label>
-                                                <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
+                                                <input type="text" class="form-control input-default @error('title') is-invalid @enderror"  placeholder="input-default" id="title" name="title" required autofocus value="{{ old('title', $post->title) }}">
                                                 @error('title')
                                                         <div class="invalid-feedback">
                                                             {{ $message }}
@@ -45,7 +37,7 @@
                                                 @error('body')
                                                 <p class="text-danger">{{ $message }}</p>
                                                 @enderror
-                                                <input id="body" type="hidden" name="body" value="{{ old('body') }}">
+                                                <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
                                                 <trix-editor input="body"></trix-editor>
                                             </div>
                                         <div  class="d-flex my-auto btn-list justify-content-end">

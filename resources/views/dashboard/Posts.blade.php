@@ -41,8 +41,12 @@
                                 </svg>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-                                <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                <form action="/dahboard" method="post">
+                                    @method('delete')
+                                    @csrf
+                                    <a class="dropdown-item" onclick="return confirm('Are you sure?')">Delete</a>
+                                </form>
+                                <a href="/dashboard/edit" class="dropdown-item">Edit</a>
                             </div>
                         </div>
                     </div>
@@ -55,7 +59,7 @@
                         </article>
                         @endforeach
                     </div> --}}
-                    <img src="https://source.unsplash.com/1400x1000/?nature.water" alt="Card image cap">
+                        <img src="{{ asset('storage/' . $post->image) }}" alt="Card image cap">
                     <article class="mb-4 pb-3">
                             <div class="card-header">
                                 <h1 class="card-title">{{ $post->title }}</h1>
