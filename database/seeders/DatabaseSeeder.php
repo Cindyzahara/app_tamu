@@ -3,8 +3,13 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\User;
+
 use App\Models\Post;
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +21,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+
+
+       User::create([
+            'username' => 'admin1',
+            'email' => 'admin1@gmail.com',
+            'password' => Hash::make('admin1'),
+            'nama_lengkap' => 'admin',
+            'verifikasi' => 'sudah'
+       ]);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -38,5 +52,6 @@ class DatabaseSeeder extends Seeder
         //        'title' => 'ketiga',
         //         'body' => '<p>hallo bro ipsum dolor sit amet, consectetur adipisicing elit. Qui facere tempora dignissimos nesciunt ab explicabo? Cumque saepe ratione eaque exercitationem quas illum similique aspernatur magnam suscipit debitis, minus quia ipsum soluta enim sequi, architecto, consectetur alias recusandae? Sapiente dignissimos atque quis totam, ipsa cupiditate, suscipit officiis consequuntur minus ut sint.</p><p> Rerum ratione illum temporibus velit eius dolores beatae voluptates iusto minima ducimus, quia earum a obcaecati! Odio totam harum illum veritatis consequuntur ex soluta eaque voluptatibus, id voluptatem, deleniti assumenda eveniet fuga ea, iure praesentium sit! Nesciunt facilis cupiditate enim. Quisquam fuga similique quia inventore dolorum totam rem exercitationem eligendi.</p>',
         //      ]);
+
     }
 }
