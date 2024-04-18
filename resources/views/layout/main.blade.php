@@ -31,6 +31,15 @@
      <link href="{{ asset('assets') }}/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
      <link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
 	
+	  {{-- trix editor --}}
+	  <link href="{{ asset('assets') }}/css/trix.css" rel="stylesheet" type="text/css">
+	  <script src="{{ asset('assets') }}/js/trix.js" type="text/javascript"></script>
+  
+	  <style>
+		trix-toolbar [data-trix-button-group="file-tools"] {
+		display:none;
+	  }
+	  </style>
 </head>
 <body>
 

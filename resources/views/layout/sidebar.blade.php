@@ -16,7 +16,7 @@
                     </a>
                 </div>
             </li>
-            <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+            <li><a href="{{ route('dashboard.index') }}" class="ai-icon" aria-expanded="false">
                 <i class="flaticon-025-dashboard"></i>
                 <span class="nav-text">Dashboard</span>
             </a>
