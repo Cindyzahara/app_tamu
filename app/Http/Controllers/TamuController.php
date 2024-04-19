@@ -14,12 +14,12 @@ class TamuController extends Controller
      */
     public function index()
     {
-        $dttamu = Tamu::all();
+        $dttamu = Tamu::latest()->get();
         return view('data_tamu.index', compact('dttamu'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new resource.   
      *
      * @return \Illuminate\Http\Response
      */

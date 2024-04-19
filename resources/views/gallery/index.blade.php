@@ -27,7 +27,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"> Galleri Kegiatan Pelatihan Guru Penggerak</h4>
-                        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#basicModal">Upload Image</button>
+                        <button type="button" class="btn btn-rounded btn-success mb-2" data-bs-toggle="modal" data-bs-target="#basicModal"><span class="btn-icon-start text-success"><i class="fa fa-upload color-success"></i></span>Upload Image</button>
                         @include('_component.message')
                     </div>
                     <div class="card-body pb-1">

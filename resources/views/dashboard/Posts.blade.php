@@ -41,7 +41,7 @@
                                 </svg>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <form action="/dahboard" method="post">
+                                <form action="/dahboard/{{ $post->id }}" method="post">
                                     @method('delete')
                                     @csrf
                                     <a class="dropdown-item" onclick="return confirm('Are you sure?')">Delete</a>
