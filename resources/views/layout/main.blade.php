@@ -16,7 +16,7 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Dompet : Payment Admin Template</title>
+	{{-- <title>Dompet : Payment Admin Template</title> --}}
 	
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="{{ asset('assets') }}/images/favicon.png">
@@ -660,6 +660,8 @@
 	<script src="{{ asset('assets') }}/js/dlabnav-init.js"></script>
 	<script src="{{ asset('assets') }}/js/demo.js"></script>
     <script src="{{ asset('assets') }}/js/styleSwitcher.js"></script>
+
+	<script src="{{ asset('assets') }}/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
 	
 </body>
 </html>

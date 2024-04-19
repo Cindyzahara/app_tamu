@@ -1,13 +1,26 @@
 @extends('layout.main')
-
+<title>Form Data Tamu</title>
 @section('content')
+    <div class="header">
+        <div class="header-content">
+            <nav class="navbar navbar-expand">
+                <div class="collapse navbar-collapse justify-content-between">
+                    <div class="header-left">
+                        <div class="dashboard_bar">
+                            Data Tamu
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
        <div class="content-body">
             <div class="container-fluid">
 				
 				<div class="row page-titles">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Table</a></li>
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Datatable</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Dahboard </a></li>
+						<li class="breadcrumb-item"><a href="javascript:void(0)">Data Tamu</a></li>
 					</ol>
                 </div>
                 <!-- row -->
@@ -15,11 +28,12 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Basic Datatable</h4>
+                                <h4 class="card-title">Form Data Tamu</h4>
+                                @include('_component.message')
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table id="example" class="display" style="min-width: 845px">
+                                    <table id="example" class="display table border-top-0 table-bordered border-bottom" style="min-width: 845px">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -44,9 +58,16 @@
                                                     <td>{{ $dt->angkatan??'' }}</td>
                                                     <td>{{ $dt->alamat??'' }}</td>
                                                     <td>{{ $dt->no_tlp??'' }}</td>
+                                                    <td>
+                                                        <a href="{{ route('data_tamu.edit', $dt->id) }}" class="btn btn-outline-warning btn-sm" title="edit"><i class="fa fa-edit"></i></a>
+                                                        <form action="{{ route('data_tamu.destroy', $dt->id) }}" method="post" onsubmit="return confirm('Apakah adna yakin akan mengahpus data ini')" class="d-inline">
+                                                            @csrf @method('DELETE')
+                                                        <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                                        </form>
+                                                    </td>
                                                 </tr>
                                             @endforeach
-                                        </tbody>
+                                        </tbody>    
                                     </table>
                                 </div>
                             </div>

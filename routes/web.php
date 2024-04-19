@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TamuController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\GalleriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,10 @@ use App\Http\Controllers\TamuController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::post('/auth', [LoginController::class, 'auth'])->name('auth');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::Resource('data_tamu', TamuController::class);
+Route::Resource('/data_tamu', TamuController::class);
+
+Route::Resource('/gallery', GalleriController::class);
