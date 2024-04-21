@@ -7,6 +7,7 @@
                 </button>
             </div>
             <div class="modal-body">
+
                 <h5>1. Link Rencana Program </h5>
                 <a href="https://drive.google.com/file/d/1uYSRCYbcCOLK0XMqsrVhOgYpCCMU5N-S/view?usp=drivesdk" style="color: blue">https://drive.google.com/file/d/1uYSRCYbcCOLK0XMqsrVhOgYpCCMU5N-S/view?usp=drivesdk
                 </a>
@@ -53,6 +54,7 @@
                 <br><a href="https://youtu.be/JD-xm41G7Dc" style="color: blue">https://youtu.be/JD-xm41G7Dc</a>
                 <br><a href="https://www.youtube.com/watch?v=R8qX_Vl2Rwk&t=619s" style="color: blue">https://www.youtube.com/watch?v=R8qX_Vl2Rwk&t=619s</a>
                 <br><a href="https://youtu.be/I_vKlISKlfg" style="color: blue">https://youtu.be/I_vKlISKlfg</a>
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
             </div>
