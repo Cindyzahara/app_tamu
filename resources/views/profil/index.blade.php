@@ -16,7 +16,6 @@
 </div>
 <div class="content-body">
     <div class="container-fluid">
-
         <div class="card mb-3">
             <img src="{{ asset('assets') }}/images/profil/2.png" style="width: 100%" class="card-img-top" alt="...">
             <div class="card-body">
@@ -26,9 +25,56 @@
             </div>
           </div>
 
+
+
+          <div class="row">
+            @foreach ($profil as $p)
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Postingan</h4>
+                    </div>
+                        <img src="{{ asset('assets/images/profil/' . $p->image) }}" alt="Card image cap">
+                            <div class="card-body">
+                              <table style="font-size: 15px;color:black">
+                                <tr>
+                                    <td>Nama : {{ $p->nama }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Sekolah : {{ $p->sekolah }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Motto : {{ $p->motto }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Program : {{ $p->program }}</td>
+                                </tr>
+                              </table>
+                            </div>
+                            <div class="card-footer">
+                              <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="{{ $p->link }}">Link</button>
+                            </div>
+                      </div>
+                </div>
+                
+
+                @endforeach
+                @include('profil.modal2')
+                
+            </div>
+            @include('profil.modal3')
+            
+        </div>
+        @include('profil.modal4')
+          {{-- <div class="col-md-4">
+
         <div class="row">
           <div class="col-xl-3">
+
             <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Profil</h4>
+                </div>
                 <img class="card-img-top img-fluid" src="{{ asset('assets') }}/images/profil/1org.jpg" alt="Card image cap">
                 <div class="card-body">
                   <table style="font-size: 15px;color:black">
@@ -53,15 +99,14 @@
                         <td>KAMSIHAT</td>
                     </tr>
                   </table>
-                  {{-- <h5><p>Nama   : SOLEHUDIN</p>
-                  <p>Sekolah    : SMPN 3 Kalijati</p> 
-                  <p>Motto      : Khoirunnas Anfa'uhum Linnas</p>  
-                  <p>Program  : KAMSIHAT </p></h5> --}}
                 </div>
                 <div class="card-footer">
                   <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Link</button>
                 </div>
             </div>
+
+        </div> --}}
+
         </div>
         <div class="col-xl-3">
           <div class="card">
@@ -103,6 +148,7 @@
       </div>
       </div>
 
+
           {{-- <div class="card mb-3">
             <div class="card-body">
               <h1 class="card-title" style="text-align: center">MOTO</h1>
@@ -112,8 +158,11 @@
           </div> --}}
 
     </div>
-</div>  
-@include('profil.modal1')  
 
+    @include('profil.modal5') 
+</div> 
+@include('profil.modal1') 
+  
+</div>  
 
 @endsection
