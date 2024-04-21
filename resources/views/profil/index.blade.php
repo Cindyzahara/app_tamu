@@ -16,7 +16,6 @@
 </div>
 <div class="content-body">
     <div class="container-fluid">
-
         <div class="card mb-3">
             <img src="{{ asset('assets') }}/images/profil/2.png" style="width: 100%" class="card-img-top" alt="...">
             <div class="card-body">
@@ -35,7 +34,6 @@
                         <h4 class="card-title">Postingan</h4>
                     </div>
                         <img src="{{ asset('assets/images/profil/' . $p->image) }}" alt="Card image cap">
-                    <article class="mb-4 pb-3">
                             <div class="card-body">
                               <table style="font-size: 15px;color:black">
                                 <tr>
@@ -55,13 +53,18 @@
                             <div class="card-footer">
                               <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="{{ $p->link }}">Link</button>
                             </div>
-                        </div>
-                    </article>
+                      </div>
                 </div>
+                
+
                 @endforeach
+                @include('profil.modal2')
+                
             </div>
+            @include('profil.modal3')
             
         </div>
+        @include('profil.modal4')
           {{-- <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
@@ -105,12 +108,10 @@
               <p class="card-text" style="text-align: center"><small class="text-body-secondary">.....</small></p>
             </div>
           </div> --}}
-          <div class="card-footer">
-            <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModalCenter2">Link</button>
-          </div>
 
     </div>
-</div>  
-@include('profil.modal1')  
-@include('profil.modal2')  
+    @include('profil.modal5') 
+</div> 
+@include('profil.modal1') 
+  
 @endsection

@@ -10,19 +10,20 @@
                 <h5>1. Link Rencana Program </h5>
                 <a href="https://drive.google.com/file/d/1uYSRCYbcCOLK0XMqsrVhOgYpCCMU5N-S/view?usp=drivesdk" style="color: blue">https://drive.google.com/file/d/1uYSRCYbcCOLK0XMqsrVhOgYpCCMU5N-S/view?usp=drivesdk
                 </a>
+                <br>
                 <a href="https://youtu.be/R8qX_Vl2Rwk" style="color: blue">https://youtu.be/R8qX_Vl2Rwk
                 </a>
-                <a href="https://youtu.be/f9BP0xWt6IY" style="color: blue">https://youtu.be/f9BP0xWt6IY
+                <br><a href="https://youtu.be/f9BP0xWt6IY" style="color: blue">https://youtu.be/f9BP0xWt6IY
                 </a>
-                <a href="https://drive.google.com/file/d/1uYSRCYbcCOLK0XMqsrVhOgYpCCMU5N-S/view?usp=sharing
+                <br><a href="https://drive.google.com/file/d/1uYSRCYbcCOLK0XMqsrVhOgYpCCMU5N-S/view?usp=sharing
                 " style="color: blue">https://drive.google.com/file/d/1uYSRCYbcCOLK0XMqsrVhOgYpCCMU5N-S/view?usp=sharing
                 </a>
                 <h5 class="mt-2">2. Link Praktik Baik</h5>
                 <a href="https://youtu.be/WzCyp2oq4e8" style="color: blue">https://youtu.be/WzCyp2oq4e8
             </a>
-                <a href="https://youtu.be/R8qX_Vl2Rwk" style="color: blue">https://youtu.be/R8qX_Vl2Rwk
+                <br><a href="https://youtu.be/R8qX_Vl2Rwk" style="color: blue">https://youtu.be/R8qX_Vl2Rwk
             </a>
-                <a href="https://youtu.be/f9BP0xWt6IY" style="color: blue">https://youtu.be/f9BP0xWt6IY
+                <br><a href="https://youtu.be/f9BP0xWt6IY" style="color: blue">https://youtu.be/f9BP0xWt6IY
             </a>
                 <h5 class="mt-2">3. Link Koneksi Antar Materi</h5>
                 <span>Modul 1.1 - </span><a href="https://drive.google.com/file/d/1NYwSLjcryf7yaByqQ0LjyXbbjAk154YA/view?usp=sharing" style="color: blue">https://drive.google.com/file/d/1NYwSLjcryf7yaByqQ0LjyXbbjAk154YA/view?usp=sharing
@@ -49,9 +50,9 @@
                 <br>
                 <h5 class="mt-2">4. Link Aksi nyata </h5>    
                 <a href="https://youtu.be/6Xd_cecd36E" style="color: blue">https://youtu.be/6Xd_cecd36E</a>
-                <a href="https://youtu.be/JD-xm41G7Dc" style="color: blue">https://youtu.be/JD-xm41G7Dc</a>
-                <a href="https://www.youtube.com/watch?v=R8qX_Vl2Rwk&t=619s" style="color: blue">https://www.youtube.com/watch?v=R8qX_Vl2Rwk&t=619s</a>
-                <a href="https://youtu.be/I_vKlISKlfg" style="color: blue">https://youtu.be/I_vKlISKlfg</a>
+                <br><a href="https://youtu.be/JD-xm41G7Dc" style="color: blue">https://youtu.be/JD-xm41G7Dc</a>
+                <br><a href="https://www.youtube.com/watch?v=R8qX_Vl2Rwk&t=619s" style="color: blue">https://www.youtube.com/watch?v=R8qX_Vl2Rwk&t=619s</a>
+                <br><a href="https://youtu.be/I_vKlISKlfg" style="color: blue">https://youtu.be/I_vKlISKlfg</a>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
             </div>

@@ -41,10 +41,42 @@ class DatabaseSeeder extends Seeder
         Profil::create([
                'nama' => 'SOLEHUDIN',
                'sekolah' => 'SMPN 3 Kalijati',
-               'motto' => 'Khoirunnas Anfa uhum Linnas',
+               'motto' => 'Khoirunnas Anfa`uhum Linnas',
                'program' => 'KAMSIHAT',
-               'image' => '1.jpg',
+               'image' => '1org.jpg',
                'link' => '#exampleModalCenter',
+             ]);
+        Profil::create([
+               'nama' => 'DIKA AHMAD FADILAH',
+               'sekolah' => 'SDN JATIMULYA PATOKBEUSI',
+               'motto' => 'Lakukan yang Terbaik dan Percayalah pada Diri Sendiri',
+               'program' => 'BERTAPA (Berani Tampil Aktif)',
+               'image' => '2.jpg',
+               'link' => '#exampleModalCenter2',
+             ]);
+        Profil::create([
+               'nama' => 'AI SUMIATI',
+               'sekolah' => 'SDN BAKTIMULYA',
+               'motto' => 'Orang hebat adalah orang yang selalu menebar manfaat untuk sekitar',
+               'program' => 'Religious Culture',
+               'image' => '5org.jpg',
+               'link' => '#exampleModalCenter3',
+             ]);
+        Profil::create([
+               'nama' => 'NUR KHOT AZIZAH',
+               'sekolah' => 'SDN BINABAKTI',
+               'motto' => 'Jangan berhenti ketika lelah, berhentilah ketika selesai',
+               'program' => 'Satu Jam Membaca di Luar Kelas',
+               'image' => '4org.jpg',
+               'link' => '#exampleModalCenter4',
+             ]);
+        Profil::create([
+               'nama' => 'IMAS ROHAYATI',
+               'sekolah' => 'SMK Negeri 2 Subang',
+               'motto' => 'Tetap jadi orang baik dalam kondisi apapun',
+               'program' => 'IT EXCELERATE',
+               'image' => '3org.jpg',
+               'link' => '#exampleModalCenter5',
              ]);
         // Post::create([
         //        'title' => 'pertama',
