@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profil;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -13,7 +14,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profil.index');
+        return view('profil.index', [
+            "profil" => Profil::latest()->get()
+        ]);
     }
 
     /**

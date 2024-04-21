@@ -26,8 +26,47 @@
             </div>
           </div>
 
-          <div class="col-xl-3">
+
+          <div class="row">
+            @foreach ($profil as $p)
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Postingan</h4>
+                    </div>
+                        <img src="{{ asset('assets/images/profil/' . $p->image) }}" alt="Card image cap">
+                    <article class="mb-4 pb-3">
+                            <div class="card-body">
+                              <table style="font-size: 15px;color:black">
+                                <tr>
+                                    <td>Nama : {{ $p->nama }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Sekolah : {{ $p->sekolah }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Motto : {{ $p->motto }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Program : {{ $p->program }}</td>
+                                </tr>
+                              </table>
+                            </div>
+                            <div class="card-footer">
+                              <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="{{ $p->link }}">Link</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                @endforeach
+            </div>
+            
+        </div>
+          {{-- <div class="col-md-4">
             <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Profil</h4>
+                </div>
                 <img class="card-img-top img-fluid" src="{{ asset('assets') }}/images/profil/1org.jpg" alt="Card image cap">
                 <div class="card-body">
                   <table style="font-size: 15px;color:black">
@@ -52,54 +91,12 @@
                         <td>KAMSIHAT</td>
                     </tr>
                   </table>
-                  {{-- <h5><p>Nama   : SOLEHUDIN</p>
-                  <p>Sekolah    : SMPN 3 Kalijati</p> 
-                  <p>Motto      : Khoirunnas Anfa'uhum Linnas</p>  
-                  <p>Program  : KAMSIHAT </p></h5> --}}
                 </div>
                 <div class="card-footer">
                   <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Link</button>
                 </div>
             </div>
-        </div>
-
-        <div class="col-xl-3">
-          <div class="card">
-              <img class="card-img-top img-fluid" src="{{ asset('assets') }}/images/profil/2.jpg" alt="Card image cap">
-              <div class="card-body">
-                <table style="font-size: 15px;color:black">
-                  <tr>
-                      <td>Nama</td>
-                      <td> : </td>
-                      <td>DIKA AHMAD FADILAH</td>
-                  </tr>
-                  <tr>
-                      <td>Sekolah</td>
-                      <td> : </td>
-                      <td>SDN JATIMULYA PATOKBEUSI</td>
-                  </tr>
-                  <tr>
-                      <td>Motto</td>
-                      <td> : </td>
-                      <td>Lakukan yang Terbaik dan Percayalah pada Diri Sendiri</td>
-                  </tr>
-                  <tr>
-                      <td>Program</td>
-                      <td> : </td>
-                      <td>BERTAPA (Berani Tampil Aktif)</td>
-                  </tr>
-                </table>
-                {{-- <h5><p>Nama 		: DIKA AHMAD FADILAH</p>
-                  <p>Sekolah 	: SDN JATIMULYA PATOKBEUSI</p>
-                  <p>Motto 		: Lakukan yang Terbaik dan Percayalah pada Diri Sendiri</p>
-                  <p>Program 	: BERTAPA (Berani Tampil Aktif)</p>
-                  </h5> --}}
-              </div>
-              <div class="card-footer">
-                <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Link</button>
-              </div>
-          </div>
-      </div>
+        </div> --}}
 
           {{-- <div class="card mb-3">
             <div class="card-body">
@@ -108,8 +105,12 @@
               <p class="card-text" style="text-align: center"><small class="text-body-secondary">.....</small></p>
             </div>
           </div> --}}
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModalCenter2">Link</button>
+          </div>
 
     </div>
 </div>  
 @include('profil.modal1')  
+@include('profil.modal2')  
 @endsection
