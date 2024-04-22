@@ -41,6 +41,11 @@
                 <span class="nav-text">Gallery Kegiatan</span>
             </a>
         </li>
+        <li><a href="{{ route('video.index') }}" class="ai-icon" aria-expanded="false">
+            <i class="bi bi-play-btn"></i>
+            <span class="nav-text">Video</span>
+        </a>
+    </li>
         </ul>
         {{-- <div class="copyright">
             <p><strong>Dompet Payment Admin Dashboard</strong> © 2022 All Rights Reserved</p>

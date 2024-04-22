@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TamuController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\VideoController;
 use App\Http\Controllers\GalleriController;
 use App\Http\Controllers\ProfileController;
 
@@ -31,4 +32,6 @@ Route::Resource('/gallery', GalleriController::class);
 Route::Resource('/profil', ProfileController::class);
 
 Route::Resource('dashboard', PostController::class);
+
+Route::Resource('/video', VideoController::class);
 

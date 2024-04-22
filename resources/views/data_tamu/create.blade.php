@@ -65,7 +65,7 @@
                                             <label class="col-lg-4 col-form-label" for="validationCustom03">TTL <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control @error('ttl') is-invalid @enderror" name="ttl" id="validationCustom02" placeholder="Enter Your TTL.." required="">
+                                                <input type="text" class="form-control @error('ttl') is-invalid @enderror" name="ttl" id="validationCustom02" placeholder="Enter Your Tempat, Tanggal (DD-MM-YYYY).." required="">
                                                 <div class="invalid-feedback">
                                                     Please enter a TTL.
                                                 </div>
