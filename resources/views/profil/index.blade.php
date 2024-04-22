@@ -38,16 +38,24 @@
                             <div class="card-body">
                               <table style="font-size: 15px;color:black">
                                 <tr>
-                                    <td>Nama : {{ $p->nama }}</td>
+                                    <td>Nama</td>
+                                    <td>:</td>
+                                    <td>{{ $p->nama }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Sekolah : {{ $p->sekolah }}</td>
+                                    <td>Sekolah</td>
+                                    <td>:</td>
+                                    <td>{{ $p->sekolah }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Motto : {{ $p->motto }}</td>
+                                    <td>Motto</td>
+                                    <td>:</td>
+                                    <td>{{ $p->motto }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Program : {{ $p->program }}</td>
+                                    <td>Program</td>
+                                    <td>:</td>
+                                    <td> {{ $p->program }}</td>
                                 </tr>
                               </table>
                             </div>
