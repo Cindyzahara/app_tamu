@@ -26,6 +26,7 @@
             </div>
           </div>
 
+        <div class="row">
           <div class="col-xl-3">
             <div class="card">
                 <img class="card-img-top img-fluid" src="{{ asset('assets') }}/images/profil/1org.jpg" alt="Card image cap">
@@ -62,7 +63,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-xl-3">
           <div class="card">
               <img class="card-img-top img-fluid" src="{{ asset('assets') }}/images/profil/2.jpg" alt="Card image cap">
@@ -100,6 +100,7 @@
                 @include('profil.modal2')
               </div>
           </div>
+      </div>
       </div>
 
           {{-- <div class="card mb-3">
