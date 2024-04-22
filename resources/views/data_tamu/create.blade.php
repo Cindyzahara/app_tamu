@@ -7,7 +7,7 @@
             <div class="collapse navbar-collapse justify-content-between">
                 <div class="header-left">
                     <div class="dashboard_bar">
-                        Form Input Data
+                        Form Input List Tamu
                     </div>
                 </div>
             </div>
@@ -18,8 +18,8 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Input Data</a></li>
+                <li class="breadcrumb-item active"><a href="{{ route('data_tamu.index') }}">List Tamu</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('data_tamu.create') }}">Input Data</a></li>
             </ol>
         </div>
         <!-- row -->
@@ -27,7 +27,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Form Input Data</h4>
+                        <h4 class="card-title">Form Input List Tamu</h4>
                     </div>
                     <div class="card-body">
                         <div class="form-validation">
@@ -40,7 +40,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="validationCustom01" name="nama" placeholder="Enter a name.." required="">
+                                                <input type="text" class="form-control @error('nama') is-invalid @enderror" id="validationCustom01" name="nama" placeholder="Enter a name.." required="" >
                                                 <div class="invalid-feedback">
                                                     Please enter a name.
                                                 </div>
@@ -51,7 +51,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <select class="default-select wide form-control" name="jk" id="validationCustom05">
+                                                <select class="default-select wide form-control @error('jk') is-invalid @enderror" name="jk" id="validationCustom05">
                                                     <option data-display="Select">--pilih--</option>
                                                     <option value="perempuan">Perempuan</option>
                                                     <option value="laki-laki">Laki-laki</option>
@@ -65,7 +65,7 @@
                                             <label class="col-lg-4 col-form-label" for="validationCustom03">TTL <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" name="ttl" id="validationCustom02" placeholder="Enter Your TTL.." required="">
+                                                <input type="text" class="form-control @error('ttl') is-invalid @enderror" name="ttl" id="validationCustom02" placeholder="Enter Your TTL.." required="">
                                                 <div class="invalid-feedback">
                                                     Please enter a TTL.
                                                 </div>
@@ -78,7 +78,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <select class="default-select wide form-control" name="jabatan" id="validationCustom05">
+                                                <select class="default-select wide form-control @error('jabatan') is-invalid @enderror" name="jabatan" id="validationCustom05">
                                                     <option data-display="Select">--pilih--</option>
                                                     <option value="pp">PP</option>
                                                     <option value="cgp">CGP</option>
@@ -97,7 +97,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <select class="default-select wide form-control" name="angkatan" id="validationCustom05">
+                                                <select class="default-select wide form-control @error('angkatan') is-invalid @enderror" name="angkatan" id="validationCustom05">
                                                     <option data-display="Select">--PILIH--</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -109,6 +109,7 @@
                                                     <option value="8">8</option>
                                                     <option value="9">9</option>
                                                     <option value="10">10</option>
+                                                    <option value="11">11</option>
                                                 </select>
                                                 <div class="invalid-feedback">
                                                     Please select a one.
@@ -119,7 +120,7 @@
                                             <label class="col-lg-4 col-form-label" for="validationCustom06">Alamat <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <textarea class="form-control" name="alamat" id="validationCustom06" rows="5" placeholder="Masukan alamat anda.." required=""></textarea>
+                                                <textarea class="form-control @error('alamat') is-invalid @enderror" name="alamat" id="validationCustom06" rows="5" placeholder="Masukan alamat anda.." required=""></textarea>
                                                 <div class="invalid-feedback">
                                                     Please enter a Alamat.
                                                 </div>
@@ -130,7 +131,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="nummber" class="form-control" name="no_tlp" id="validationCustom07" placeholder="Enter Your No Telp.." required="">
+                                                <input type="nummber" class="form-control @error('no_tlp') is-invalid @enderror" name="no_tlp" id="validationCustom07" placeholder="Enter Your No Telp.." required="">
                                                 <div class="invalid-feedback">
                                                     No tlp max 13 .
                                                 </div>

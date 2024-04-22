@@ -2,9 +2,18 @@
 
 @section('content')
 
-
 <div class="content-body">
     <div class="container-fluid">
+        
+        <div class="card mb-3">
+            <img src="{{ asset('assets') }}/images/profil/2.png" style="width: 100%" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h1 class="card-title" style="text-align: center">KELOMPOK PP-391</h1>
+              <p class="card-text" style="text-align: center">CGP ANGKATAN 9</p>
+              <p class="card-text" style="text-align: center"><small class="text-body-secondary">KABUPATEN SUBANG</small></p>
+            </div>
+          </div>
+        
         <!-- row -->
         <div class="row page-titles">
             <div  class="d-flex my-auto btn-list justify-content-end">
@@ -41,12 +50,12 @@
                                 </svg>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <form action="/dahboard/{{ $post->id }}" method="post">
+                                <form action="{{ route('dashboard.destroy',$post->id) }}" method="post">
                                     @method('delete')
                                     @csrf
                                     <a class="dropdown-item" onclick="return confirm('Are you sure?')">Delete</a>
                                 </form>
-                                <a href="/dashboard/edit" class="dropdown-item">Edit</a>
+                                <a href="{{ route('dashboard.edit',$post->id) }}" class="dropdown-item">Edit</a>
                             </div>
                         </div>
                     </div>

@@ -28,8 +28,8 @@
                     <div class="card-header">
                         <h4 class="card-title"> Galleri Kegiatan Pelatihan Guru Penggerak</h4>
                         <button type="button" class="btn btn-rounded btn-success mb-2" data-bs-toggle="modal" data-bs-target="#basicModal"><span class="btn-icon-start text-success"><i class="fa fa-upload color-success"></i></span>Upload Image</button>
-                        @include('_component.message')
                     </div>
+                    @include('_component.message')
                     <div class="card-body pb-1">
                         <div id="lightgallery" class="row">
                             @foreach ($data as $dt)

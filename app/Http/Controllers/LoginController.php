@@ -12,6 +12,12 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
+    public function logout() 
+    {
+        Auth::logout();
+        return redirect()->route('login');
+    }
+
     public function auth(Request $request)
     {
         // dd($request);
@@ -27,7 +33,7 @@ class LoginController extends Controller
         if (Auth::attempt($validasi)) {
             $request->session()->regenerate();
 
-            return redirect()->route('data_tamu.index')->with('success', 'Berhasil Login');
+            return redirect()->route('dashboard.index')->with('success', 'Berhasil Login');
         }
         return back()->withErrors('Email atau password yang di masukan tidak sesuai');
     }

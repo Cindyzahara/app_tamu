@@ -18,8 +18,8 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Input Data</a></li>
+                <li class="breadcrumb-item active"><a href="{{ route('data_tamu.index') }}">List Tamu</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('data_tamu.edit') }}">Edit List Tamu</a></li>
             </ol>
         </div>
         <!-- row -->

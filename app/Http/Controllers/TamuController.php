@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tamu;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class TamuController extends Controller
@@ -146,5 +147,23 @@ class TamuController extends Controller
     {
         Tamu::find($id)->delete();
         return redirect()->route('data_tamu.index')->with('success', 'Data berhasil di hapus');
+    }
+
+    // Export Pdf
+    public function export_pdf() 
+    {
+        // mengurutkan sesuai abjad 
+        $data = Tamu::orderBy('jabatan', 'asc');
+        
+        $data = $data->get();
+
+        // Meneruskan parameter ke tampilan ekspor
+        $pdf = PDF::loadview('data_tamu.exportPdf', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+        $pdf->setOption(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+        // UNTUK MENENTUKAN NAMA FILE
+        $filename = date('YmdHis') . '_data_tamu';
+        // untuk mendownload file pdf
+        return $pdf->download($filename.'.pdf');
     }
 }

@@ -7,7 +7,7 @@
                 <div class="collapse navbar-collapse justify-content-between">
                     <div class="header-left">
                         <div class="dashboard_bar">
-                            Data Tamu
+                            List Tamu
                         </div>
                     </div>
                 </div>
@@ -19,8 +19,8 @@
 				
 				<div class="row page-titles">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Dahboard </a></li>
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Data Tamu</a></li>
+						<li class="breadcrumb-item active"><a href="{{ route('dashboard.index') }}">Dahboard </a></li>
+						<li class="breadcrumb-item"><a href="{{ route('data_tamu.index') }}">List Tamu</a></li>
 					</ol>
                 </div>
                 <!-- row -->
@@ -28,8 +28,10 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Form Data Tamu</h4>
+                                <h4 class="card-title">List Tamu</h4>
                                 @include('_component.message')
+                                <a href="{{ route('exportPdf_tamu') }}" class="btn btn-rounded btn-danger"><span class="btn-icon-start text-danger"><i class="fa fa-download color-danger"></i>
+                                </span>Export PDF</a>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\TamuController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GalleriController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,11 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::Resource('/data_tamu', TamuController::class);
+route::get('/exportPdf_tamu', [TamuController::class, 'export_pdf'])->name('exportPdf_tamu');
 
 Route::Resource('/gallery', GalleriController::class);
 
-
+Route::Resource('/profil', ProfileController::class);
 
 Route::Resource('dashboard', PostController::class);
 

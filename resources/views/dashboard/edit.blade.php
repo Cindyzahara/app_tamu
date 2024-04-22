@@ -2,60 +2,72 @@
 @extends('layout.main')
 
 @section('content')
-       <div class="content-body">
-            <div class="container-fluid">
-				
-				<div class="row page-titles">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Table</a></li>
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Datatable</a></li>
-					</ol>
-                </div>
-                <!-- row -->
-                    <div class="row">
-                        <div class="col-xl-13">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Edit Postingan</h4>
+<div class="content-body">
+    <div class="container-fluid">
+        
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Table</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Datatable</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+            <div class="row">
+                <div class="col-xl-13">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Tambah Postingan</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form method="post" action="{{ route('dashboard.update', $post->id) }}" enctype="multipart/form-data">
+                                    @csrf @method('PUT')
+                                    <div class="mb-3">
+                                        <label for="title" class="form-label">Title</label>
+                                        <input type="text" class="form-control input-default @error('title') is-invalid @enderror"  placeholder="input-default" id="title" name="title" required autofocus value="{{ $post->title }}">
+                                        @error('title')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label">Post Image</label>
+                                        <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
+                                        @error('title')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label">Foto Lama : </label>
+                                        <img src="{{ asset('storage/' . $post->image) }}" width="200px" alt="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="title" class="form-label">Body</label>
+                                        @error('body')
+                                        <p class="text-danger">{{ $message }}</p>
+                                        @enderror
+                                        <input id="body" type="hidden" name="body" value="{{ $post->body }}">
+                                        <trix-editor input="body"></trix-editor>
+                                    </div>
+                                <div  class="d-flex my-auto btn-list justify-content-end">
+                                    <button type="submit" class="btn btn-rounded btn-info"><span class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i></span> Save</button>
                                 </div>
-                                <div class="card-body">
-                                    <div class="basic-form">
-                                        <form method="post" action="/dashboard">
-                                            @method('put')
-                                            @csrf
-                                            <div class="mb-3">
-                                                <label for="title" class="form-label">Title</label>
-                                                <input type="text" class="form-control input-default @error('title') is-invalid @enderror"  placeholder="input-default" id="title" name="title" required autofocus value="{{ old('title', $post->title) }}">
-                                                @error('title')
-                                                        <div class="invalid-feedback">
-                                                            {{ $message }}
-                                                        </div>
-                                                @enderror
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="title" class="form-label">Body</label>
-                                                @error('body')
-                                                <p class="text-danger">{{ $message }}</p>
-                                                @enderror
-                                                <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
-                                                <trix-editor input="body"></trix-editor>
-                                            </div>
-                                        <div  class="d-flex my-auto btn-list justify-content-end">
-                                            <button type="submit" class="btn btn-rounded btn-info"><span class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i></span> Save</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
+    </div>
+</div>
 
 
 <script>
-    document.addEventListener('trix-file-accept', function(e){
-    e.preventDefault();
-    })
+document.addEventListener('trix-file-accept', function(e){
+e.preventDefault();
+})
 </script>
 @endsection
 
