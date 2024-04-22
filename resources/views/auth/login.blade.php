@@ -10,7 +10,7 @@
                         <div class="col-xl-12">
                             <div class="auth-form">
                                 <div class="text-center mb-3">
-                                    <a href="index.html"><img src="{{ asset('assets') }}/images/logo2.png"  alt=""></a>
+                                    <a href="index.html"><img src="{{ asset('assets') }}/images/2.png" width="80"  alt=""></a>
                                 </div>
                                 <h4 class="text-center mb-4">Sign in your account</h4>
                                 <form action="{{ route('auth') }}" method="POST">
