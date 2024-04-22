@@ -16,6 +16,16 @@ class ProfileController extends Controller
         return view('profil.index');
     }
 
+    public function modal1()
+    {
+        return view('profil.modal1');
+    }
+
+    public function modal2()
+    {
+        return view('profil.modal2');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -96,7 +96,7 @@
                   </h5> --}}
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Link</button>
+                <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModalpopover">Link</button>
               </div>
           </div>
       </div>
@@ -112,4 +112,6 @@
     </div>
 </div>  
 @include('profil.modal1')  
+
+@include('profil.modal2')
 @endsection
