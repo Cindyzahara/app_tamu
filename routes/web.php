@@ -9,6 +9,7 @@ use App\Http\Controllers\GalleriController;
 use App\Http\Controllers\KoneksiController;
 use App\Http\Controllers\PraktikController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AksiNyataController;
 use App\Http\Controllers\RencanaProgramController;
 
 /*
@@ -41,4 +42,6 @@ Route::Resource('/video', VideoController::class);
 Route::Resource('/rencanaProgram', RencanaProgramController::class);
 Route::Resource('/praktikBaik', PraktikController::class);
 Route::Resource('/koneksi', KoneksiController::class);
+
+Route::Resource('/aksiNyata', AksiNyataController::class);
 

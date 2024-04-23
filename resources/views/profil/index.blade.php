@@ -24,15 +24,12 @@
               <h4 class="card-text" style="text-align: center"><small class="text-body-secondary">KABUPATEN SUBANG</small></h4>
             </div>
           </div>
-
-
-
           <div class="row">
             @foreach ($profil as $p)
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Postingan</h4>
+                        <h4 class="card-title">Profile</h4>
                     </div>
                         <img src="{{ asset('assets/images/profil/' . $p->image) }}" alt="Card image cap">
                             <div class="card-body">
