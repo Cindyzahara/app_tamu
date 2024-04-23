@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {
@@ -83,16 +84,29 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $rules = [
+        $validateData = $request->validate([
             'title' => 'required|max:255',
+            // 'image' => 'image|file|max:1024',
             'body' => 'required'
-        ];
+        ]);
+        // dd($request);
 
-        $validateData = $request->validate($rules);
-        Post::where('id', $id)
-        ->update($validateData);
+        if($request->file('image')) {
+            $data = Post::where('id',$id)->first();
+            File::delete(public_path('storage').'/'. $data->image);
+            $validateData['image'] = $request->file('image')->store('post-images');
+           
 
-        return redirect('/dashboard')->with('success', 'Post has been update!');
+            // dd($validateData);
+            // $dataReq = [
+            //     'title' => $request->title,
+            //     'image' => $validateData->image,
+            //     'body' => $request->body,
+            // ];
+        }
+
+        Post::find($id)->update($validateData);
+        return redirect('/dashboard')->with('success', 'New post has been added!');
     }
 
     /**
@@ -103,7 +117,9 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        Post::destroy($id);
+        $data = Post::find($id)->first();
+        File::delete(public_path('storage').'/'. $data->image);
+        Post::find($id)->delete();
         return redirect('/dashboard')->with('success', 'New post has been deleted!');
     }
 }

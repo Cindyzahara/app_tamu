@@ -5,8 +5,8 @@
                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                     {{-- <img src="images/profile/pic1.jpg" width="20" alt=""> --}}
                     <div class="header-info ms-3">
-                        <span class="font-w600 ">Hi,<b>@auth {{ auth()->user()->username }} @endauth!</b></span>
-                        <small class="text-end font-w400">@auth {{ auth()->user()->email }} @endauth</small>
+                        <span class="font-w600 "><b>@auth {{ auth()->user()->username }} @endauth</b></span>
+                        {{-- <small class="text-end font-w400">@auth {{ auth()->user()->email }} @endauth</small> --}}
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
@@ -26,6 +26,17 @@
                 <span class="nav-text">Profile</span>
             </a>
             </li>
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-025-dashboard"></i>
+                <span class="nav-text">Data Tugas CGP</span>
+            </a>
+            <ul aria-expanded="false">
+                <li><a href="index.html">Rencana Program</a></li>
+                <li><a href="index-2.html">Praktik Baik</a></li>
+                <li><a href="my-wallet.html">Koneksi Antar Materi</a></li>
+                <li><a href="page-invoices.html">Aksi Nayata</a></li>
+            </ul>
+        </li>
             <li><a href="{{ route('data_tamu.index') }}" class="ai-icon" aria-expanded="false">
                 <i class="bi bi-list-ul"></i>
                 <span class="nav-text">List Tamu</span>

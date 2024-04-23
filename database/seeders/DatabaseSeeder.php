@@ -24,13 +24,13 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
 
-    //    User::create([
-    //         'username' => 'admin1',
-    //         'email' => 'admin1@gmail.com',
-    //         'password' => Hash::make('admin1'),
-    //         'nama_lengkap' => 'admin',
-    //         'verifikasi' => 'sudah'
-    //    ]);
+       User::create([
+            'username' => 'KELOMPOK SIANIDA',
+            'email' => 'sianida@gmail.com',
+            'password' => Hash::make('sianida'),
+            'nama_lengkap' => 'admin',
+            'verifikasi' => 'sudah'
+       ]);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

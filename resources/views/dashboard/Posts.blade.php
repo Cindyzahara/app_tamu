@@ -16,7 +16,17 @@
         
         <!-- row -->
         <div class="row page-titles">
-            <div  class="d-flex my-auto btn-list justify-content-end">
+            <div class="row justify-content-end mb-3">
+                <div class="col-md-6">
+                    <form action="/dashboard">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
+                            <button class="btn btn-info" type="submit">Search..</button>
+                        </div>
+                    </form>
+                </div>
+               </div>
+            <div  class="d-flex my-auto btn-list justify-content">
                 <a href="/dashboard/create" class="btn btn-rounded btn-info"><span class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i></span> Tambah</a>
             </div>
         </div>
@@ -25,16 +35,7 @@
         {{ session('success') }}
       </div>
       @endif
-           <div class="row justify-content-center mb-3">
-            <div class="col-md-6">
-                <form action="/dashboard">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
-                        <button class="btn btn-info" type="submit">Search..</button>
-                    </div>
-                </form>
-            </div>
-           </div>
+          
         <div class="row">
             @foreach ($posts as $post)
             <div class="col-md-4">
@@ -50,10 +51,11 @@
                                 </svg>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <form action="{{ route('dashboard.destroy',$post->id) }}" method="post">
-                                    @method('delete')
+                                <form  onsubmit="return confirm('Are you sure?')" action="{{ route('dashboard.destroy',$post->id) }}" method="post">
                                     @csrf
-                                    <a class="dropdown-item" onclick="return confirm('Are you sure?')">Delete</a>
+                                    @method('delete')
+                                    <button class="dropdown-item" type="submit">Delete</button>
+                                    {{-- <a class="dropdown-item" onclick="return confirm('Are you sure?')">Delete</a> --}}
                                 </form>
                                 <a href="{{ route('dashboard.edit',$post->id) }}" class="dropdown-item">Edit</a>
                             </div>
