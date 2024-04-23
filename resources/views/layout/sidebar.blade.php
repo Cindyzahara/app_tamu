@@ -32,9 +32,11 @@
             </a>
             <ul aria-expanded="false">
                 <li><a href="{{ route('rencanaProgram.index') }}">Rencana Program</a></li>
-                <li><a href="index-2.html">Praktik Baik</a></li>
-                <li><a href="my-wallet.html">Koneksi Antar Materi</a></li>
+
+                <li><a href="{{ route('praktikBaik.index') }}">Praktik Baik</a></li>
+                <li><a href="{{ route('koneksi.index') }}">Koneksi Antar Materi</a></li>
                 <li><a href="{{ route('aksiNyata.index') }}">Aksi Nayata</a></li>
+
             </ul>
         </li>
             <li><a href="{{ route('data_tamu.index') }}" class="ai-icon" aria-expanded="false">
