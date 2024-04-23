@@ -2,6 +2,21 @@
 
 @section('content')
 
+
+<div class="header">
+    <div class="header-content">
+        <nav class="navbar navbar-expand">
+            <div class="collapse navbar-collapse justify-content-between">
+                <div class="header-left">
+                    <div class="dashboard_bar">
+                        Dashboard
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
 <div class="content-body">
     <div class="container-fluid">
         
@@ -17,16 +32,8 @@
         <!-- row -->
         <div class="row page-titles">
             <div class="row justify-content-end mb-3">
-                <div class="col-md-6">
-                    <form action="/dashboard">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
-                            <button class="btn btn-info" type="submit">Search..</button>
-                        </div>
-                    </form>
-                </div>
                </div>
-            <div  class="d-flex my-auto btn-list justify-content">
+            <div  class="d-flex my-auto btn-list justify-content-end">
                 <a href="/dashboard/create" class="btn btn-rounded btn-info"><span class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i></span> Tambah</a>
             </div>
         </div>
@@ -35,7 +42,16 @@
         {{ session('success') }}
       </div>
       @endif
-          
+      <div  class="d-flex my-auto btn-list justify-content-center">
+      <div class="col-md-6">
+        <form action="/dashboard">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
+                <button class="btn btn-info" type="submit">Search..</button>
+            </div>
+        </form>
+    </div>
+      </div>
         <div class="row">
             @foreach ($posts as $post)
             <div class="col-md-4">
