@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\GalleriController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RencanaProgramController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,6 @@ Route::Resource('/profil', ProfileController::class);
 Route::Resource('dashboard', PostController::class);
 
 Route::Resource('/video', VideoController::class);
+
+Route::Resource('/rencanaProgram', RencanaProgramController::class);
 

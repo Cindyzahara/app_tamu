@@ -31,7 +31,7 @@
                 <span class="nav-text">Data Tugas CGP</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="index.html">Rencana Program</a></li>
+                <li><a href="{{ route('rencanaProgram.index') }}">Rencana Program</a></li>
                 <li><a href="index-2.html">Praktik Baik</a></li>
                 <li><a href="my-wallet.html">Koneksi Antar Materi</a></li>
                 <li><a href="page-invoices.html">Aksi Nayata</a></li>

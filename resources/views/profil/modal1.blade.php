@@ -32,6 +32,7 @@
                 <br><span>Modul 2.3 - </span><a href="https://youtu.be/q1ram-KyZaY?si=5xg4_C6y4GSc2lvH" style="color: blue">https://youtu.be/q1ram-KyZaY?si=5xg4_C6y4GSc2lvH</a>
                 <br><span>Modul 1.4 - </span><a href="https://youtu.be/tHgvHxgnUU4?si=WAtvRlLN3cTg2T9m" style="color: blue">https://youtu.be/tHgvHxgnUU4?si=WAtvRlLN3cTg2T9m</a>
                 <br><span>Modul 1.4 - </span><a href="https://youtu.be/s_t4xX2P4Qo?si=se42vlRAav_GksK4" style="color: blue">https://youtu.be/s_t4xX2P4Qo?si=se42vlRAav_GksK4</a>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
             </div>
