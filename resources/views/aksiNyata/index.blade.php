@@ -6,7 +6,7 @@
         <div class="row page-titles">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Data Tugas CGP</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Rencana Program</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('aksiNyata.index') }}">Aksi Nyata</a></li>
             </ol>
         </div>
         <div class="row">
@@ -23,7 +23,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r1" title="Klik untuk melihat Link Rencana Program">Link Rencana Program</button>
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a1" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
                       </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r2" title="Klik untuk melihat Link Rencana Program">Link Rencana Program</button>
-                        @include('rencanaProgram.modal2')
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a2" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        @include('aksiNyata.modal2')
                       </div>
                 </div>
             </div>
@@ -58,8 +58,8 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r3" title="Klik untuk melihat Link Rencana Program">Link Rencana Program</button>
-                        @include('rencanaProgram.modal3')
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a3" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        @include('aksiNyata.modal3')
                       </div>
                 </div>
             </div>
@@ -76,8 +76,8 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r4" title="Klik untuk melihat Link Rencana Program">Link Rencana Program</button>
-                        @include('rencanaProgram.modal4')
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a4" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        @include('aksiNyata.modal4')
                       </div>
                 </div>
             </div>
@@ -94,8 +94,8 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r5" title="Klik untuk melihat Link Rencana Program">Link Rencana Program</button>
-                        @include('rencanaProgram.modal5')
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a5" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        @include('aksiNyata.modal5')
                       </div>
                 </div>
             </div>
@@ -103,5 +103,5 @@
     </div>
 </div>
 
-@include('rencanaProgram.modal1')
+@include('aksiNyata.modal1')
 @endsection

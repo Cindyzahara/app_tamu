@@ -27,14 +27,14 @@
             </a>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                <i class="flaticon-025-dashboard"></i>
+                <i class="bi bi-folder2-open"></i>
                 <span class="nav-text">Data Tugas CGP</span>
             </a>
             <ul aria-expanded="false">
                 <li><a href="{{ route('rencanaProgram.index') }}">Rencana Program</a></li>
                 <li><a href="index-2.html">Praktik Baik</a></li>
                 <li><a href="my-wallet.html">Koneksi Antar Materi</a></li>
-                <li><a href="page-invoices.html">Aksi Nayata</a></li>
+                <li><a href="{{ route('aksiNyata.index') }}">Aksi Nayata</a></li>
             </ul>
         </li>
             <li><a href="{{ route('data_tamu.index') }}" class="ai-icon" aria-expanded="false">
@@ -52,11 +52,11 @@
                 <span class="nav-text">Gallery Kegiatan</span>
             </a>
         </li>
-        <li><a href="{{ route('video.index') }}" class="ai-icon" aria-expanded="false">
+        {{-- <li><a href="{{ route('video.index') }}" class="ai-icon" aria-expanded="false">
             <i class="bi bi-play-btn"></i>
             <span class="nav-text">Video</span>
         </a>
-    </li>
+    </li> --}}
         </ul>
         {{-- <div class="copyright">
             <p><strong>Dompet Payment Admin Dashboard</strong> © 2022 All Rights Reserved</p>
