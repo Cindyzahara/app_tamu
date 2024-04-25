@@ -19,7 +19,7 @@
         <div class="row page-titles">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active"><a href="{{ route('data_tamu.index') }}">List Tamu</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('data_tamu.edit') }}">Edit List Tamu</a></li>
+                <li class="breadcrumb-item"><a href="">Edit List Tamu</a></li>
             </ol>
         </div>
         <!-- row -->
@@ -40,7 +40,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="validationCustom01" value="{{ $dt->nama }}" name="nama" placeholder="Enter a name.." required="">
+                                                <input type="text" class="form-control" id="validationCustom01" value="{{ $dt->nama }}" name="nama" placeholder="Isi nama anda.." required="">
                                                 <div class="invalid-feedback">
                                                     Please enter a name.
                                                 </div>
@@ -52,22 +52,32 @@
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="default-select wide form-control" name="jk" id="validationCustom05">
-                                                    <option data-display="Select">{{ $dt->jk}}</option>
+                                                    <option selected value="{{ $dt->jk }}">{{ $dt->jk}}</option>
                                                     <option value="perempuan">Perempuan</option>
                                                     <option value="laki-laki">Laki-laki</option>
                                                 </select>
                                                 <div class="invalid-feedback">
-                                                    Please select a one.
+                                                    Pilih Jenis Kelamin.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="validationCustom03">TTL <span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="validationCustom03">Tempat Lahir <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" name="ttl" value="{{ $dt->ttl }}" id="validationCustom02" placeholder="Enter Your TTL.." required="">
+                                                <input type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" name="tempat_lahir" value="{{ $dt->ttl }}" id="validationCustom02" placeholder="Isi Tempat lahir.." required="">
+                                                <div class="invalid-feedback">  
+                                                    Isi Tempat Lahir.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom04">Tanggal Lahir <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" name="tanggal_lahir" value="{{ $dt->ttl }}" id="validationCustom02" placeholder="s Isi Tanggal (DD-MM-YYYY).." required="">
                                                 <div class="invalid-feedback">
-                                                    Please enter a TTL.
+                                                    Isi Tanggal lahir.
                                                 </div>
                                             </div>
                                         </div>
@@ -79,7 +89,7 @@
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="default-select wide form-control" name="jabatan" id="validationCustom05">
-                                                    <option data-display="Select">{{ $dt->jabatan }}</option>
+                                                    <option selected value="{{ $dt->jabatan }}">{{ $dt->jabatan }}</option>
                                                     <option value="pp">PP</option>
                                                     <option value="cgp">CGP</option>
                                                     <option value="fasilitator">Fasilitator</option>
@@ -98,7 +108,7 @@
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="default-select wide form-control" name="angkatan" id="validationCustom05">
-                                                    <option data-display="Select">{{ $dt->angkatan }}</option>
+                                                    <option selected value="{{ $dt->angkatan }}">{{ $dt->angkatan }}</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -119,7 +129,7 @@
                                             <label class="col-lg-4 col-form-label" for="validationCustom06">Alamat <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <textarea class="form-control" value="{{ $dt->alamat }}" name="alamat" id="validationCustom06" rows="5" placeholder="Masukan alamat anda.." required=""></textarea>
+                                                <textarea class="form-control" name="alamat" value="{{ $dt->alamat }}" id="validationCustom06" rows="5" placeholder="Masukan alamat anda.." required=""></textarea>
                                                 <div class="invalid-feedback">
                                                     Please enter a Alamat.
                                                 </div>
@@ -130,7 +140,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="nummber" class="form-control" name="no_tlp" value="{{ $dt->no_tlp }}" id="validationCustom07" placeholder="Enter Your No Telp.." required="">
+                                                <input type="nummber" class="form-control" name="no_tlp" value="{{ $dt->no_tlp }}" id="validationCustom07" placeholder="Isi No Telp.." required="">
                                                 <div class="invalid-feedback">
                                                     No tlp max 13 .
                                                 </div>

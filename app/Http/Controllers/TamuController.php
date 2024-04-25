@@ -41,7 +41,6 @@ class TamuController extends Controller
         $request->validate([
             'nama' => 'required',
             'jk' => 'required',
-            'ttl' => 'required',
             'jabatan' => 'required',
             'angkatan' => 'required',
             'alamat' => 'required',
@@ -49,18 +48,24 @@ class TamuController extends Controller
         ],[
             'nama.required' => 'Nama tidak boleh kosong',
             'jk.required' => 'Jenis Kelamin tidak boleh kosong',
-            'ttl.required' => 'Templat Tanggal Lahir tidak boleh kosong',
+            'tempat_lahir.required' => 'Tempat lahir tidak boleh kosong',
+            'tanggal_lahir.required' => 'Tanggal Lahir tidak boleh kosong',
             'jabatan.required' => 'Jabatan tidak boleh kosong',
             'angkatan.required' => 'Angkatan tidak boleh kosong',
             'alamat.required' => 'Alamat tidak boleh kosong',
             'no_tlp.required' => 'Nomor telepon tidak boleh kosong',
         ]); 
 
-      
+        $tempat_lahir = $request->input('tempat_lahir');
+        $tanggal_lahir = $request->input('tanggal_lahir');
+
+        $tanggal_lahir_formatted = date('d F Y', strtotime($tanggal_lahir));
+        $ttl = $tempat_lahir . ',' .' ' . $tanggal_lahir_formatted;
+
         $dttamu = [
             'nama' => $request->nama,
-            'jk' => $request->jk,
-            'ttl' => $request->ttl,
+            'jk' => $request->jk,   
+            'ttl' => $ttl,
             'jabatan' => $request->jabatan,
             'angkatan' => $request->angkatan,
             'alamat' => $request->alamat,

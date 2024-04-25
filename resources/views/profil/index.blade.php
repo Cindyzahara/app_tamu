@@ -17,11 +17,11 @@
 <div class="content-body">
     <div class="container-fluid">
         <div class="card mb-3">
-            <img src="{{ asset('assets') }}/images/profil/2.png" style="width: 100%" class="card-img-top" alt="...">
+            <img src="{{ asset('assets') }}/images/profil/pp.jpg" style="width: 80%; display:block; margin:0 auto" class="card-img-top mt-4" alt="...">
             <div class="card-body">
-              <h1 class="card-title" style="text-align: center">KELOMPOK PP-391</h1>
-              <h4 class="card-text" style="text-align: center">CGP ANGKATAN 9</h4>
-              <h4 class="card-text" style="text-align: center"><small class="text-body-secondary">KABUPATEN SUBANG</small></h4>
+              <h1 class="card-title" style="text-align: center"><b>KELOMPOK PP-398</b></h1>
+              <h4 class="card-text" style="text-align: center"><b> CGP ANGKATAN 9</b></h4>
+              <h4 class="card-text" style="text-align: center"><small class="text-body-secondary"><b>KABUPATEN SUBANG</b></small></h4>
             </div>
           </div>
           <div class="row">
@@ -31,7 +31,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Profile</h4>
                     </div>
-                        <img src="{{ asset('assets/images/profil/' . $p->image) }}" alt="Card image cap">
+                        <img src="{{ asset('assets/images/gambar/' . $p->image) }}" alt="Card image cap">
                             <div class="card-body">
                               <table style="font-size: 15px;color:black">
                                 <tr>

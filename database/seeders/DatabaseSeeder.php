@@ -24,13 +24,13 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
 
-       User::create([
-            'username' => 'KELOMPOK SIANIDA',
-            'email' => 'sianida@gmail.com',
-            'password' => Hash::make('sianida'),
-            'nama_lengkap' => 'admin',
-            'verifikasi' => 'sudah'
-       ]);
+     //   User::create([
+     //        'username' => 'KELOMPOK SIANIDA',
+     //        'email' => 'sianida@gmail.com',
+     //        'password' => Hash::make('sianida'),
+     //        'nama_lengkap' => 'admin',
+     //        'verifikasi' => 'sudah'
+     //   ]);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
                'sekolah' => 'SMPN 3 Kalijati',
                'motto' => 'Khoirunnas Anfa`uhum Linnas',
                'program' => 'KAMSIHAT',
-               'image' => '1org.jpg',
+               'image' => '1.png',
                'link' => '#exampleModalCenter',
              ]);
         Profil::create([
@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
                'sekolah' => 'SDN JATIMULYA PATOKBEUSI',
                'motto' => 'Lakukan yang Terbaik dan Percayalah pada Diri Sendiri',
                'program' => 'BERTAPA (Berani Tampil Aktif)',
-               'image' => '2.jpg',
+               'image' => '2.png',
                'link' => '#exampleModalCenter2',
              ]);
         Profil::create([
@@ -59,7 +59,7 @@ class DatabaseSeeder extends Seeder
                'sekolah' => 'SDN BAKTIMULYA',
                'motto' => 'Orang hebat adalah orang yang selalu menebar manfaat untuk sekitar',
                'program' => 'Religious Culture',
-               'image' => '5org.jpg',
+               'image' => '3.png',
                'link' => '#exampleModalCenter3',
              ]);
         Profil::create([
@@ -67,7 +67,7 @@ class DatabaseSeeder extends Seeder
                'sekolah' => 'SDN BINABAKTI',
                'motto' => 'Jangan berhenti ketika lelah, berhentilah ketika selesai',
                'program' => 'Satu Jam Membaca di Luar Kelas',
-               'image' => '4org.jpg',
+               'image' => '4.png',
                'link' => '#exampleModalCenter4',
              ]);
         Profil::create([
@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
                'sekolah' => 'SMK Negeri 2 Subang',
                'motto' => 'Tetap jadi orang baik dalam kondisi apapun',
                'program' => 'IT EXCELERATE',
-               'image' => '3org.jpg',
+               'image' => '5.png',
                'link' => '#exampleModalCenter5',
              ]);
         // Post::create([

@@ -40,7 +40,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r1" title="Klik untuk melihat Link Praktik Baik">Link</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r1" title="Klik untuk melihat Link Praktik Baik">Link Tugas</button>
                       </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r2" title="Klik untuk melihat Link Praktik Baik">Link</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r2" title="Klik untuk melihat Link Praktik Baik">Link Tugas</button>
                         @include('praktikBaik.modal2')
                       </div>
                 </div>
@@ -75,7 +75,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r3" title="Klik untuk melihat Link Praktik Baik">Link</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r3" title="Klik untuk melihat Link Praktik Baik">Link Tugas</button>
                         @include('praktikBaik.modal3')
                       </div>
                 </div>
@@ -93,7 +93,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r4" title="Klik untuk melihat Link Praktik Baik">Link</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r4" title="Klik untuk melihat Link Praktik Baik">Link Tugas</button>
                         @include('praktikBaik.modal4')
                       </div>
                 </div>
@@ -111,7 +111,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r5" title="Klik untuk melihat Link Praktik Baik">Link</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#r5" title="Klik untuk melihat Link Praktik Baik">Link Tugas</button>
                         @include('praktikBaik.modal5')
                       </div>
                 </div>

@@ -43,7 +43,7 @@
                                                 <th>Jenis Kelamin</th>
                                                 <th>TTL</th>
                                                 <th>Jabatan</th>
-                                                <th>CGP Angkatan</th>
+                                                <th>Angkatan</th>
                                                 <th>Alamat</th>
                                                 <th>No Tlp</th>
                                                 <th>Action</th>

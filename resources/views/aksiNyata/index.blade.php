@@ -23,7 +23,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a1" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a1" title="Klik untuk melihat Link Aksi Nyata">Link Aksi Nyata</button>
                       </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a2" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a2" title="Klik untuk melihat Link Aksi Nyata">Link Aksi Nyata</button>
                         @include('aksiNyata.modal2')
                       </div>
                 </div>
@@ -58,7 +58,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a3" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a3" title="Klik untuk melihat Link Aksi Nyata">Link Aksi Nyata</button>
                         @include('aksiNyata.modal3')
                       </div>
                 </div>
@@ -76,7 +76,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a4" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a4" title="Klik untuk melihat Link Aksi Nyata">Link Aksi Nyata</button>
                         @include('aksiNyata.modal4')
                       </div>
                 </div>
@@ -94,7 +94,7 @@
                         </p>
                     </div> --}}
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a5" title="Klik untuk melihat Link Rencana Program">Link Aksi Nyata</button>
+                        <button type="button" class="btn btn-outline-warning btn-sm mb-2 float-end" data-bs-toggle="modal" data-bs-target="#a5" title="Klik untuk melihat Link Aksi Nyata">Link Aksi Nyata</button>
                         @include('aksiNyata.modal5')
                       </div>
                 </div>

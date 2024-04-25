@@ -42,7 +42,7 @@
                                             <div class="col-lg-6">
                                                 <input type="text" class="form-control @error('nama') is-invalid @enderror" id="validationCustom01" name="nama" placeholder="Enter a name.." required="" >
                                                 <div class="invalid-feedback">
-                                                    Please enter a name.
+                                                    Isi Kolom Nama.
                                                 </div>
                                             </div>
                                         </div>
@@ -57,24 +57,34 @@
                                                     <option value="laki-laki">Laki-laki</option>
                                                 </select>
                                                 <div class="invalid-feedback">
-                                                    Please select a one.
+                                                    Pilih Jenis Kelamin.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="validationCustom03">TTL <span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="validationCustom03">Tempat Lahir <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control @error('ttl') is-invalid @enderror" name="ttl" id="validationCustom02" placeholder="Enter Your Tempat, Tanggal (DD-MM-YYYY).." required="">
+                                                <input type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" name="tempat_lahir" id="validationCustom02" placeholder="Enter Your Tempat, Tanggal (DD-MM-YYYY).." required="">
                                                 <div class="invalid-feedback">
-                                                    Please enter a TTL.
+                                                    Isi Tempat Lahir.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom04">Tanggal Lahir <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" name="tanggal_lahir" id="validationCustom02" placeholder="Enter Your Tempat, Tanggal (DD-MM-YYYY).." required="">
+                                                <div class="invalid-feedback">
+                                                    Isi Tanggal lahir.
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="validationCustom04">Jabatan
+                                            <label class="col-lg-4 col-form-label" for="validationCustom05">Jabatan
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
@@ -93,7 +103,7 @@
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="validationCustom05">Angakatan CGP
+                                            <label class="col-lg-4 col-form-label" for="validationCustom06">Angakatan
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
@@ -117,7 +127,7 @@
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="validationCustom06">Alamat <span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="validationCustom07">Alamat <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
                                                 <textarea class="form-control @error('alamat') is-invalid @enderror" name="alamat" id="validationCustom06" rows="5" placeholder="Masukan alamat anda.." required=""></textarea>
@@ -127,7 +137,7 @@
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="validationCustom07">No Telepon
+                                            <label class="col-lg-4 col-form-label" for="validationCustom08">No Telepon
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">

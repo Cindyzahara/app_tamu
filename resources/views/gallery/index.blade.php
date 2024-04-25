@@ -37,7 +37,7 @@
                                 <img src="{{ asset('assets/img/'. $dt->foto) }}" alt="" style="width:100%;">
                                 <form action="{{ route('gallery.destroy', $dt->id) }}" method="post" onsubmit="return confirm('Apakah adna yakin akan mengahpus foto ini')" class="d-inline">
                                 @csrf @method('DELETE')
-                                <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                <button type="submit" class="btn btn-outline-danger mt-2"><i class="fa fa-trash"></i></button>
                                 </form>
                             </a>
                             @endforeach

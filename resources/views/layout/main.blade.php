@@ -22,6 +22,7 @@
 	<link rel="shortcut icon" type="image/png" href="{{ asset('assets') }}/images/favicon.png">
 	
 	<link href="{{ asset('assets') }}/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+	<link href="{{ asset('assets') }}/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{{ asset('assets') }}/vendor/nouislider/nouislider.min.css">
 	<!-- Style css -->
     <link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
@@ -46,7 +47,7 @@
     <!--*******************
         Preloader start
     ********************-->
-    <div id="preloader">
+    {{-- <div id="preloader">
         <div class="waviy">
 		   <span style="--i:1">L</span>
 		   <span style="--i:2">o</span>
@@ -59,7 +60,7 @@
 		   <span style="--i:9">.</span>
 		   <span style="--i:10">.</span>
 		</div>
-    </div>
+    </div> --}}
     <!--*******************
         Preloader end
     ********************-->
@@ -73,8 +74,8 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-			<div style="margin-left: 100px" class="mt-4">
-            <a href="index.html"><img src="{{ asset('assets') }}/images/2.png" class="main-logo" alt="logo" width="80" >
+			<div style="margin-left: 30px" class="mt-4">
+            <a href="index.html"><img src="{{ asset('assets') }}/images/profil/logo.png" class="main-logo" alt="logo" width="200" >
 				{{-- <svg class="logo-abbr" width="53" height="53" viewbox="0 0 53 53">
 					<path d="M21.6348 8.04782C21.6348 5.1939 23.9566 2.87204 26.8105 2.87204H28.6018L28.0614 1.37003C27.7576 0.525342 26.9616 0 26.1132 0C25.8781 0 25.639 0.0403711 25.4052 0.125461L7.3052 6.7133C6.22916 7.105 5.67535 8.29574 6.06933 9.37096L7.02571 11.9814H21.6348V8.04782Z" fill="#759DD9"></path>
 					<path d="M26.8105 5.97754C25.6671 5.97754 24.7402 6.90442 24.7402 8.04786V11.9815H42.8555V8.04786C42.8555 6.90442 41.9286 5.97754 40.7852 5.97754H26.8105Z" fill="#F8A961"></path>
@@ -671,6 +672,9 @@
 	<script src="{{ asset('assets') }}/js/dlabnav-init.js"></script>
 	<script src="{{ asset('assets') }}/js/demo.js"></script>
     <script src="{{ asset('assets') }}/js/styleSwitcher.js"></script>
+
+	<script src="{{ asset('assets') }}/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="{{ asset('assets') }}/js/plugins-init/sweetalert.init.js"></script>
 
 	<script src="{{ asset('assets') }}/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
 	
